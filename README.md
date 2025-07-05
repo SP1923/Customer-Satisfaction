@@ -2,11 +2,18 @@
 Customer Satisfaction Prediction
 
 A machine learning project to predict customer satisfaction ratings from customer support ticket data. The goal is to use ticket features (like product, issue type, etc.) to classify satisfaction scores on a scale (e.g. 1–5). The notebook loads a cleaned dataset of support tickets, engineers features, and trains classifiers to predict the Customer Satisfaction Rating.
+
 Dataset Overview
+
 Source: customer_support_tickets_cleaned.csv (509 records, 17 original columns)
+
 Features: Customer demographics and ticket details, including age, gender, product purchased, ticket type, subject, description, status, priority, channel, etc. The target variable is Customer Satisfaction Rating (ratings 1.0–5.0).
+
 Task: Multi-class classification (predict satisfaction rating). Many target values are missing (NaN) and were presumably filtered or ignored during modeling.
+
+
 Features Used
+
 All relevant columns were encoded and used as input features (after dropping identifiers and unused columns). Specifically:
 Numeric features: Ticket ID (identifier), Customer Age, Days Since First Purchase (newly computed from the purchase date)
 Categorical features (label-encoded): Customer Gender, Product Purchased, Ticket Type, Ticket Subject, Ticket Description (encoded text categories), Ticket Status, Ticket Priority, Ticket Channel
